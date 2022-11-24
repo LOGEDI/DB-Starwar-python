@@ -24,8 +24,11 @@ class Favoriteplanet(Base):
     __tablename__ = 'favorite_planet'
     id = Column(Integer, primary_key=True)
     planet_id = Column(Integer,ForeignKey('user.id'))
-   # person = relationship(Person)
-
+    postion_id = Column (Integer,ForeignKey('position.id'))
+    colour_id = Column (Integer,ForeignKey('colour.id'))
+    shape_id = Column (Integer,ForeignKey('shap.id'))
+    size_id = Column (Integer,ForeignKey('size.id'))
+    distance_id = Column (Integer,ForeignKey('distance.id'))
       
 
 class User(Base):
@@ -41,8 +44,12 @@ class User(Base):
 class FavoriteCharacter(Base):
     __tablename__ = 'favorite_Character'
     id = Column(Integer, primary_key=True)
-    user_id =Column(Integer,ForeignKey('user.id'))
+    user_id = Column(Integer,ForeignKey('user.id'))
     character_id = Column(Integer,ForeignKey('character.id'))
+    confidant_id = Column(Integer,ForeignKey('confidant.id'))
+    love_id = Column(Integer,ForeignKey('love.id'))
+    protagonist_id = Column(Integer,ForeignKey('protagonist.id'))
+    
    # person = relationship(Person)
          
    
