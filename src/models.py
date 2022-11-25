@@ -29,6 +29,7 @@ class Favoriteplanet(Base):
     shape_id = Column (Integer,ForeignKey('shap.id'))
     size_id = Column (Integer,ForeignKey('size.id'))
     distance_id = Column (Integer,ForeignKey('distance.id'))
+    distance_fromSun_id = Column (Integer,ForeignKey('distance.id'))
       
 
 class User(Base):
